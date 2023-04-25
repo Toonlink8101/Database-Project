@@ -16,33 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `pitcher`
+-- Table structure for table `pitches`
 --
 
-DROP TABLE IF EXISTS `pitcher`;
+DROP TABLE IF EXISTS `pitches`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pitcher` (
-  `Pitcher_ID` int NOT NULL,
-  `First_Name` varchar(45) DEFAULT NULL,
-  `Last_Name` varchar(45) DEFAULT NULL,
-  `Jersey_Num` int DEFAULT NULL,
-  `games_pitched` int DEFAULT NULL,
-  `runs_given` int DEFAULT NULL,
-  `team_id` int DEFAULT NULL,
-  PRIMARY KEY (`Pitcher_ID`),
-  KEY `team_id_idx` (`team_id`),
-  CONSTRAINT `team_id` FOREIGN KEY (`team_id`) REFERENCES `teams` (`team_id`) ON DELETE SET NULL
+CREATE TABLE `pitches` (
+  `MyUnknownColumn` text,
+  `MyUnknownColumn_[0]` double DEFAULT NULL,
+  `MyUnknownColumn_[1]` text,
+  `MyUnknownColumn_[2]` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `pitcher`
+-- Dumping data for table `pitches`
 --
 
-LOCK TABLES `pitcher` WRITE;
-/*!40000 ALTER TABLE `pitcher` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pitcher` ENABLE KEYS */;
+LOCK TABLES `pitches` WRITE;
+/*!40000 ALTER TABLE `pitches` DISABLE KEYS */;
+INSERT INTO `pitches` VALUES ('1',90.5,'Changeup','Ball'),('1',83.5,'Slider','Strike'),('1',79.2,'Curve Ball','Strike'),('1',94.9,'Sinker','Hit'),('1',91.5,'Cutter','Strike'),('1',95.2,'Fastball','Ball');
+/*!40000 ALTER TABLE `pitches` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -54,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-19 21:00:16
+-- Dump completed on 2023-04-25 16:35:26

@@ -16,27 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `teams`
+-- Table structure for table `pitchers`
 --
 
-DROP TABLE IF EXISTS `teams`;
+DROP TABLE IF EXISTS `pitchers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `teams` (
-  `team_id` int NOT NULL,
-  `team_name` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`team_id`)
+CREATE TABLE `pitchers` (
+  `MyUnknownColumn` bigint NOT NULL,
+  `MyUnknownColumn_[0]` text,
+  `MyUnknownColumn_[1]` text,
+  `MyUnknownColumn_[3]` bigint DEFAULT NULL,
+  `MyUnknownColumn_[4]` bigint DEFAULT NULL,
+  `MyUnknownColumn_[5]` bigint DEFAULT NULL,
+  `team_id` int DEFAULT NULL,
+  PRIMARY KEY (`MyUnknownColumn`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `teams`
+-- Dumping data for table `pitchers`
 --
 
-LOCK TABLES `teams` WRITE;
-/*!40000 ALTER TABLE `teams` DISABLE KEYS */;
-INSERT INTO `teams` VALUES (1,'Chicago White Sox'),(2,'Cleveland Guardians'),(3,'Detroit Tigers'),(4,'Kansas City Royals'),(5,'Minnesota Twins'),(6,'Chicago Cubs'),(7,'Cincinnati Reds'),(8,'Milwaukee Brewers'),(9,'Pittsburgh Pirates'),(10,'St. Louis Cardinals'),(11,'Baltimore Orioles'),(12,'Boston Red Sox'),(13,'New York Yankees'),(14,'Tampa Bay Rays'),(15,'Toronto Blue Jays'),(16,'Atlanta Braves'),(17,'Miami Marlins'),(18,'New York Mets'),(19,'Philadelphia Phillies'),(20,'Washington Nationals'),(21,'Houston Astros'),(22,'Los Angeles Angels'),(23,'Oakland Athletics'),(24,'Seattle Mariners'),(25,'Texas Rangers'),(26,'Arizona Diamondbacks'),(27,'Colorado Rockies'),(28,'Los Angeles Dodgers'),(29,'San Diego Padres'),(30,'San Francisco Giants');
-/*!40000 ALTER TABLE `teams` ENABLE KEYS */;
+LOCK TABLES `pitchers` WRITE;
+/*!40000 ALTER TABLE `pitchers` DISABLE KEYS */;
+INSERT INTO `pitchers` VALUES (1,'Walker','Buehler ',21,12,30,28),(2,'Joe','Musgrove',48,30,67,29),(3,'George','Kirby',68,25,54,24),(4,'Yu','Darvish',11,30,67,29),(5,'Triston','McKenzie',24,31,65,2),(6,'Brandon','Woodruff',53,27,56,8),(7,'Clayton','Kershaw',22,22,36,28),(8,'Logan','Webb',62,32,76,30);
+/*!40000 ALTER TABLE `pitchers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-25 16:35:25
+-- Dump completed on 2023-04-25 16:35:26

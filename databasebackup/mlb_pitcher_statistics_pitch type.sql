@@ -16,32 +16,26 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `pitch`
+-- Table structure for table `pitch type`
 --
 
-DROP TABLE IF EXISTS `pitch`;
+DROP TABLE IF EXISTS `pitch type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pitch` (
-  `pitch_id` int NOT NULL,
-  `pitcher_id` int DEFAULT NULL,
-  `speed` double DEFAULT NULL,
-  `pitch_type` varchar(45) DEFAULT NULL,
-  `pitch_count` int DEFAULT NULL,
-  `ball_strike_hit` varchar(6) DEFAULT NULL,
-  PRIMARY KEY (`pitch_id`),
-  KEY `pitcher_id_idx` (`pitcher_id`),
-  CONSTRAINT `pitcher_id` FOREIGN KEY (`pitcher_id`) REFERENCES `pitcher` (`Pitcher_ID`) ON DELETE SET NULL
+CREATE TABLE `pitch type` (
+  `Pitch Type` bigint DEFAULT NULL,
+  `MyUnknownColumn` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `pitch`
+-- Dumping data for table `pitch type`
 --
 
-LOCK TABLES `pitch` WRITE;
-/*!40000 ALTER TABLE `pitch` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pitch` ENABLE KEYS */;
+LOCK TABLES `pitch type` WRITE;
+/*!40000 ALTER TABLE `pitch type` DISABLE KEYS */;
+INSERT INTO `pitch type` VALUES (1,'Changeup'),(2,'Curve Ball'),(3,'Cutter'),(4,'Fastball'),(5,'Slider'),(6,'Splitter'),(7,'Sinker'),(8,'Screwball');
+/*!40000 ALTER TABLE `pitch type` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-19 21:00:16
+-- Dump completed on 2023-04-25 16:35:26
